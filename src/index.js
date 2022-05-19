@@ -1,1 +1,3 @@
-console.log("Running");
+import { homePage } from "./home";
+
+homePage();

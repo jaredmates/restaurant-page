@@ -1,1 +1,1 @@
-console.log("Running");
+(()=>{"use strict";!function(){const e=document.querySelector("#content"),t=document.createElement("h1");t.textContent="Jared's Tacos";const n=document.createElement("h3");n.textContent="Where Men's Dreams Come True!";const c=document.createElement("p");c.textContent="Come eat my tacos. Super cheap and you're guaranteed to leave with a smile!";const o=document.createElement("img");o.src="images/tacos.jpg",e.appendChild(t),e.appendChild(n),e.appendChild(c),e.appendChild(o)}()})();
