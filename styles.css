@@ -1,0 +1,12 @@
+img {
+  max-width: 100%;
+  width: 50vw;
+  height: auto;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
