@@ -1,5 +1,6 @@
 function homePage() {
-  const content = document.querySelector("#content");
+  const homeContainer = document.createElement("div");
+  homeContainer.classList.add("home-container");
 
   const restName = document.createElement("h1");
   restName.textContent = "Jared's Tacos";
@@ -14,10 +15,12 @@ function homePage() {
   const tacoImg = document.createElement("img");
   tacoImg.src = "images/tacos.jpg";
 
-  content.appendChild(restName);
-  content.appendChild(tagline);
-  content.appendChild(description);
-  content.appendChild(tacoImg);
+  homeContainer.appendChild(restName);
+  homeContainer.appendChild(tagline);
+  homeContainer.appendChild(description);
+  homeContainer.appendChild(tacoImg);
+
+  return homeContainer;
 }
 
 export { homePage };
