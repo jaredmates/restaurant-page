@@ -10,3 +10,28 @@ img {
   align-items: center;
   flex-direction: column;
 }
+
+.button-container {
+  border: black 1px solid;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
