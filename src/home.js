@@ -1,24 +1,26 @@
 function homePage() {
+  // const content = document.querySelector("#content");
   const homeContainer = document.createElement("div");
   homeContainer.classList.add("home-container");
 
-  const restName = document.createElement("h1");
-  restName.textContent = "Jared's Tacos";
-
   const tagline = document.createElement("h3");
-  tagline.textContent = "Where Men's Dreams Come True!";
+  tagline.textContent = "World Famous Tacos!";
 
-  const description = document.createElement("p");
-  description.textContent =
-    "Come eat my tacos. Super cheap and you're guaranteed to leave with a smile!";
-
-  const tacoImg = document.createElement("img");
-  tacoImg.src = "images/tacos.jpg";
-
-  homeContainer.appendChild(restName);
   homeContainer.appendChild(tagline);
-  homeContainer.appendChild(description);
-  homeContainer.appendChild(tacoImg);
+
+  const orderBtn = document.createElement("button");
+  orderBtn.classList.add("order-btn");
+  orderBtn.textContent = "Order Online";
+
+  homeContainer.appendChild(orderBtn);
+
+  // const tacoImg = document.createElement("img");
+  // tacoImg.classList.add("home-background");
+  // tacoImg.src = "images/tacos.jpg";
+
+  // homeContainer.appendChild(tacoImg);
+
+  // content.appendChild(homeContainer);
 
   return homeContainer;
 }

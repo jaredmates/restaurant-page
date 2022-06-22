@@ -14,24 +14,5 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
-    // compress: true,
-    // historyApiFallback: true,
   },
 };
-
-// ------------------------------
-
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const BundleAnalyzerPlugin =
-//   require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-
-// mode: 'development',
-// entry: {
-//   bundle: path.resolve(__dirname, 'src/index.js'),
-// },
-// output: {
-//   path: path.resolve(__dirname, 'dist'),
-//   filename: '[name][contenthash].js',
-//   clean: true,
-//   assetModuleFilename: '[name][ext]',
-// },
