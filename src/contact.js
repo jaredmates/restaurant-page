@@ -1,4 +1,7 @@
 function contactPage() {
+  const main = document.getElementById("main");
+  main.textContent = "";
+
   const contactContainer = document.createElement("div");
   contactContainer.classList.add("contact-container");
 
@@ -7,7 +10,7 @@ function contactPage() {
 
   contactContainer.appendChild(contactPage);
 
-  return contactContainer;
+  main.appendChild(contactContainer);
 }
 
-export { contactPage };
+export default contactPage;

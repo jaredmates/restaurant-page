@@ -1,40 +1,60 @@
-import { homePage } from "./home";
-import { menuPage } from "./menu";
-import { contactPage } from "./contact";
+import homePage from "./home";
+import menuPage from "./menu";
+import contactPage from "./contact";
+import header from "./header";
 
-const content = document.querySelector("#content");
+function navEvents() {
+  const homeBtn = document.querySelector(".home-btn");
+  const menuBtn = document.querySelector(".menu-btn");
+  const contactBtn = document.querySelector(".contact-btn");
 
-function navBar() {
-  const buttonContainer = document.createElement("div");
-  buttonContainer.classList.add("button-container");
-
-  const homeBtn = document.createElement("button");
-  homeBtn.textContent = "Home";
-  homeBtn.addEventListener("click", () => {
-    content.removeChild(content.children[1]);
-    content.appendChild(homePage());
+  homeBtn.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    activeButton(homeBtn);
+    homePage();
   });
 
-  const menuBtn = document.createElement("button");
-  menuBtn.textContent = "Menu";
-  menuBtn.addEventListener("click", () => {
-    content.removeChild(content.children[1]);
-    content.appendChild(menuPage());
+  menuBtn.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    activeButton(menuBtn);
+    menuPage();
   });
 
-  const contactBtn = document.createElement("button");
-  contactBtn.textContent = "Contact";
-  contactBtn.addEventListener("click", () => {
-    content.removeChild(content.children[1]);
-    content.appendChild(contactPage());
+  contactBtn.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    activeButton(contactBtn);
+    contactPage();
   });
-
-  buttonContainer.appendChild(homeBtn);
-  buttonContainer.appendChild(menuBtn);
-  buttonContainer.appendChild(contactBtn);
-
-  return buttonContainer;
 }
 
-content.appendChild(navBar());
-content.appendChild(homePage());
+function activeButton(button) {
+  const buttons = document.querySelectorAll(".btn-nav");
+
+  buttons.forEach((button) => {
+    if (button !== this) {
+      button.classList.remove("active");
+    }
+  });
+
+  button.classList.add("active");
+}
+
+function main() {
+  const mainContent = document.createElement("main");
+  mainContent.classList.add("main");
+  mainContent.setAttribute("id", "main");
+  return mainContent;
+}
+
+function initialize() {
+  const content = document.getElementById("content");
+
+  content.appendChild(header());
+  content.appendChild(main());
+
+  activeButton(document.querySelector(".btn-nav"));
+  homePage();
+  navEvents();
+}
+
+export default initialize;

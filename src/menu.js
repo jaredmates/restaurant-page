@@ -1,4 +1,7 @@
 function menuPage() {
+  const main = document.getElementById("main");
+  main.textContent = "";
+
   const menuContainer = document.createElement("div");
   menuContainer.classList.add("menu-container");
 
@@ -10,12 +13,15 @@ function menuPage() {
   const menuItemsContainer = document.createElement("div");
   menuItemsContainer.classList.add("menu-items-container");
 
+  // -----------------
+
   const cornTacosContainer = document.createElement("div");
   cornTacosContainer.classList.add("corn-tacos-container");
 
   const cornTacosImg = document.createElement("img");
-  cornTacosImg.classList.add("corn-tacos-img");
-  cornTacosImg.src = "images/cornTacos.jpeg";
+  cornTacosImg.classList.add("corn-tacos-img", "menu-img");
+  cornTacosImg.src = "images/corntacos.jpeg";
+
   const cornTacosText = document.createElement("h3");
   cornTacosText.textContent = "Elote (Mexican Street Corn) Tacos";
 
@@ -23,12 +29,15 @@ function menuPage() {
   cornTacosContainer.appendChild(cornTacosText);
   menuItemsContainer.appendChild(cornTacosContainer);
 
+  // ---------------------------
+
   const alPastorTacosContainer = document.createElement("div");
   alPastorTacosContainer.classList.add("alPastor-tacos-container");
 
   const alPastorTacosImg = document.createElement("img");
-  alPastorTacosImg.classList.add("alpastor-tacos-img");
+  alPastorTacosImg.classList.add("alpastor-tacos-img", "menu-img");
   alPastorTacosImg.src = "images/alpastor.jpg";
+
   const alPastorTacosText = document.createElement("h3");
   alPastorTacosText.textContent = "Tacos Al Pastor";
 
@@ -36,12 +45,15 @@ function menuPage() {
   alPastorTacosContainer.appendChild(alPastorTacosText);
   menuItemsContainer.appendChild(alPastorTacosContainer);
 
+  // ---------------------
+
   const limeTacosContainer = document.createElement("div");
   limeTacosContainer.classList.add("lime-tacos-container");
 
   const limeTacosImg = document.createElement("img");
-  limeTacosImg.classList.add("lime-tacos-img");
+  limeTacosImg.classList.add("lime-tacos-img", "menu-img");
   limeTacosImg.src = "images/chickenlimetacos.jpeg";
+
   const limeTacosText = document.createElement("h3");
   limeTacosText.textContent = "Tequila-Lime Chicken Tacos";
 
@@ -49,12 +61,15 @@ function menuPage() {
   limeTacosContainer.appendChild(limeTacosText);
   menuItemsContainer.appendChild(limeTacosContainer);
 
+  // --------------------
+
   const porkTacosContainer = document.createElement("div");
   porkTacosContainer.classList.add("pork-tacos-container");
 
   const porkTacosImg = document.createElement("img");
-  porkTacosImg.classList.add("pork-tacos-img");
+  porkTacosImg.classList.add("pork-tacos-img", "menu-img");
   porkTacosImg.src = "images/pulledporktacos.jpg";
+
   const porkTacosText = document.createElement("h3");
   porkTacosText.textContent = "Pulled Pork Tacos with Pineapple Slaw";
 
@@ -62,12 +77,15 @@ function menuPage() {
   porkTacosContainer.appendChild(porkTacosText);
   menuItemsContainer.appendChild(porkTacosContainer);
 
+  // ---------------------
+
   const buffaloTacosContainer = document.createElement("div");
   buffaloTacosContainer.classList.add("buffalo-tacos-container");
 
   const buffaloTacosImg = document.createElement("img");
-  buffaloTacosImg.classList.add("buffalo-tacos-img");
+  buffaloTacosImg.classList.add("buffalo-tacos-img", "menu-img");
   buffaloTacosImg.src = "images/buffalocauliflowertacos.jpg";
+
   const buffaloTacosText = document.createElement("h3");
   buffaloTacosText.textContent = "Buffalo Cauliflower Tacos";
 
@@ -76,8 +94,7 @@ function menuPage() {
   menuItemsContainer.appendChild(buffaloTacosContainer);
 
   menuContainer.appendChild(menuItemsContainer);
-
-  return menuContainer;
+  main.appendChild(menuContainer);
 }
 
-export { menuPage };
+export default menuPage;
