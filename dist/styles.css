@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Smooch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem; /* 16px */
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+#content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  padding-top: 66px;
+}
+
+.active {
+  color: blue;
+}
+
+/* -------HOME-------- */
+
+.home-container {
+  height: 92vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/tacos.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.order-btn {
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #d6e4f0;
+  background-color: #1e56a0;
+  border-radius: 8px;
+  border: 0;
+}
+
+.order-btn:hover {
+  color: white;
+}
+
+/* ------MENU-------- */
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d6e4f0;
+}
+
+.menu-page-text {
+  margin: 0.5em 0;
+  color: #163172;
+}
+
+.menu-items-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 1em;
+  background-color: #1e56a0;
+  padding: 1.5em 0;
+  border-radius: 10px;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.menu-img {
+  width: 10em;
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .items-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .menu-items-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    place-items: center;
+  }
+  .items-container {
+    width: 75%;
+  }
+}
+
+/* ------CONTACT-------- */
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d6e4f0;
+}
+
+.contact-page-text {
+  margin: 0.5em 0;
+  color: #163172;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+  background-color: #1e56a0;
+  padding: 2em;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.info-container {
+  display: flex;
+  gap: 0.5em;
+  color: white;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 0.75em;
+}
+
+.map-responsive {
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-info-container {
+    max-width: 700px;
+  }
+  .map-responsive {
+    max-width: 600px;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .contact-info-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    max-width: 800px;
+    place-items: center;
+    margin-bottom: 9em;
+  }
+  .info-container {
+    align-items: center;
+  }
+}
+
+/* -----------HEADER-------------- */
+
+.header-container {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.button-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header-container li {
+  display: flex;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+}
+
+.header-container li:hover {
+  background-color: #f4f4f4;
+}
+
+.restaurant-name {
+  font-family: "Smooch", cursive;
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+}
+
+.button-container {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header-container .menu-icon {
+  cursor: pointer;
+  /* display: inline-block; */
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header-container .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header-container .menu-icon .navicon:before,
+.header-container .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header-container .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header-container .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header-container .menu-btn {
+  display: none;
+}
+
+.header-container .menu-btn:checked ~ .button-container {
+  max-height: 240px;
+}
+
+.header-container .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header-container .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header-container .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header-container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header-container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .header-container li {
+    float: left;
+  }
+  .header-container li {
+    padding: 20px 30px;
+  }
+  .header-container .button-container {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header-container .menu-icon {
+    display: none;
+  }
+}

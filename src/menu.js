@@ -5,7 +5,8 @@ function menuPage() {
   const menuContainer = document.createElement("div");
   menuContainer.classList.add("menu-container");
 
-  const menuPage = document.createElement("h1");
+  const menuPage = document.createElement("h2");
+  menuPage.classList.add("menu-page-text");
   menuPage.textContent = "Menu Page";
 
   menuContainer.appendChild(menuPage);
@@ -16,7 +17,7 @@ function menuPage() {
   // -----------------
 
   const cornTacosContainer = document.createElement("div");
-  cornTacosContainer.classList.add("corn-tacos-container");
+  cornTacosContainer.classList.add("corn-tacos-container", "items-container");
 
   const cornTacosImg = document.createElement("img");
   cornTacosImg.classList.add("corn-tacos-img", "menu-img");
@@ -32,7 +33,10 @@ function menuPage() {
   // ---------------------------
 
   const alPastorTacosContainer = document.createElement("div");
-  alPastorTacosContainer.classList.add("alPastor-tacos-container");
+  alPastorTacosContainer.classList.add(
+    "alpastor-tacos-container",
+    "items-container"
+  );
 
   const alPastorTacosImg = document.createElement("img");
   alPastorTacosImg.classList.add("alpastor-tacos-img", "menu-img");
@@ -48,7 +52,7 @@ function menuPage() {
   // ---------------------
 
   const limeTacosContainer = document.createElement("div");
-  limeTacosContainer.classList.add("lime-tacos-container");
+  limeTacosContainer.classList.add("lime-tacos-container", "items-container");
 
   const limeTacosImg = document.createElement("img");
   limeTacosImg.classList.add("lime-tacos-img", "menu-img");
@@ -64,7 +68,7 @@ function menuPage() {
   // --------------------
 
   const porkTacosContainer = document.createElement("div");
-  porkTacosContainer.classList.add("pork-tacos-container");
+  porkTacosContainer.classList.add("pork-tacos-container", "items-container");
 
   const porkTacosImg = document.createElement("img");
   porkTacosImg.classList.add("pork-tacos-img", "menu-img");
@@ -80,7 +84,10 @@ function menuPage() {
   // ---------------------
 
   const buffaloTacosContainer = document.createElement("div");
-  buffaloTacosContainer.classList.add("buffalo-tacos-container");
+  buffaloTacosContainer.classList.add(
+    "buffalo-tacos-container",
+    "items-container"
+  );
 
   const buffaloTacosImg = document.createElement("img");
   buffaloTacosImg.classList.add("buffalo-tacos-img", "menu-img");

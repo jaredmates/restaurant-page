@@ -5,7 +5,7 @@ import header from "./header";
 
 function navEvents() {
   const homeBtn = document.querySelector(".home-btn");
-  const menuBtn = document.querySelector(".menu-btn");
+  const menuBtn = document.querySelector(".food-menu-btn");
   const contactBtn = document.querySelector(".contact-btn");
 
   homeBtn.addEventListener("click", (e) => {
