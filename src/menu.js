@@ -21,7 +21,7 @@ function menuPage() {
 
   const cornTacosImg = document.createElement("img");
   cornTacosImg.classList.add("corn-tacos-img", "menu-img");
-  cornTacosImg.src = "images/corntacos.jpeg";
+  cornTacosImg.src = "images/cornTacos.jpeg";
 
   const cornTacosText = document.createElement("h3");
   cornTacosText.textContent = "Elote (Mexican Street Corn) Tacos";
